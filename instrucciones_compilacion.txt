@@ -1,0 +1,72 @@
+# Instrucciones para compilar y ejecutar los programas de k-mers
+
+Este proyecto contiene tres programas principales escritos en C++:
+
+1. calibrar y heavy hitters con TowerSketch
+   - Archivo: TS-CMCU.cpp
+   - Uso:
+     - Calibración:
+       ./prog1 lista_archivos.txt k salida.csv
+     - Heavy hitters:
+       ./prog1 lista_archivos.txt k phi salida.txt
+
+2. frecuencias y heavy hitters exactos
+   - Archivo: 1edc6b84-7623-4244-91ac-20e839f3ea86.cpp
+   - Uso:
+     - Heavy hitters exactos:
+       ./prog2 hh lista_archivos.txt k phi salida_hh.txt
+     - Frecuencias exactas:
+       ./prog2 freq lista_archivos.txt k salida_freq.txt
+
+3. heavy hitters con CountSketch
+   - Archivo: 34d59507-d053-49b2-84d6-529dc5750b7f.cpp
+   - Uso:
+       ./prog3 lista_archivos.txt k phi salida.txt
+
+4. calibración para CountSketch
+   - Archivo: calibracion_countsketch.cpp
+   -Uso:
+       ./prog4 lista_archivos.txt k phi salida.txt
+
+---
+
+## Compilación
+
+Para compilar los programas se deben incluir también los archivos de soporte `kmersheader.cpp`, ya que contienen implementaciones requeridas.
+
+Ejemplos de compilación con `g++`:
+
+1. Para el primer programa (TowerSketch):
+   g++  TS-CMCU.cpp kmersheader.cpp -o prog1
+
+2. Para el segundo programa (Exactos):
+   g++ GTExactos.cpp kmersheader.cpp -o prog2
+
+3. Para el tercer programa (CountSketch):
+   g++ countsketch.cpp kmersheader.cpp -o prog3
+
+4.Para el tercer programa (Calibración CountSketch):
+   g++ countsketch.cpp kmersheader.cpp -o prog4
+
+---
+
+## Ejecución
+
+1. **Calibración TowerSketch**  
+   ./prog1 lista_archivos.txt 21 salida.csv
+
+2. **Heavy hitters TowerSketch**  
+   ./prog1 lista_archivos.txt 21 0.000002 salida.txt
+
+3. **Heavy hitters exactos**  
+   ./prog2 hh lista_archivos.txt 21 0.000002 salida_hh.txt
+
+4. **Frecuencias exactas**  
+   ./prog2 freq lista_archivos.txt 21 salida_freq.txt
+
+5. **Heavy hitters CountSketch**  
+   ./prog3 lista_archivos.txt 21 0.000002 salida.txt
+
+---
+
+Nota: `lista_archivos.txt` debe contener, línea por línea, las rutas de los archivos de secuencias a procesar.
