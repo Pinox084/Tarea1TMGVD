@@ -1,0 +1,9 @@
+GCA_006152045.1_ASM615204v1_genomic.fna
+GCA_018421455.1_ASM1842145v1_genomic.fna
+GCA_943334715.2_HRSG-H6-bin-64_genomic.fna
+GCA_943334795.2_HRSG-H6-bin-28_genomic.fna
+GCA_943329525.2_HRS-HS6-bin-101_genomic.fna
+GCA_943329805.2_HRSG-H13-bin-193_genomic.fna
+GCA_943331045.1_HRSG-E2-bin-118_genomic.fna
+GCA_945870955.1_MoE-23oct19-325_genomic.fna
+GCA_945872895.1_MaE-04nov19-161_genomic.fna
